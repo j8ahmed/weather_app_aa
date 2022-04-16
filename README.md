@@ -34,4 +34,10 @@ Please, note that 16-days daily forecast and History API are not available for F
 
 ### Icon and Fonts Resources
 
+I will probably go with [Font Awesome - weather icons](https://fontawesome.com/search?q=weather&s=solid%2Cbrands). I need to figure out all the different types of weather given from the Open Weather API and match the displayed icon's accordingly.
 
+### Tasks
+
+1. Setup files system to match layout
+2. Build class components to represent static version of app (no-styling)
+3. Write out Default state and basic functionality

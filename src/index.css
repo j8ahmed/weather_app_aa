@@ -1,5 +1,15 @@
-body {
+/* Resets */
+*{
+  box-sizing: border-box;
+}
+body{
   margin: 0;
+  padding: 0;
+  background: #eef6fb;
+  color: #333339;
+}
+body {
+  /* margin: 0; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

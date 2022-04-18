@@ -41,3 +41,53 @@ I will probably go with [Font Awesome - weather icons](https://fontawesome.com/s
 1. Setup files system to match layout
 2. Build class components to represent static version of app (no-styling)
 3. Write out Default state and basic functionality
+
+
+### Bugs and Fixes
+
+- Struggled to get `.module.less` files working in my react components. This was due to no type definition being mapped to `less` modules. Once I added a type declaration and the appropriate loaders in my `webpack.config.js` file I was good to go.
+
+```typescript
+// File: react-app-env.d.ts
+
+declare module '*.module.less' {
+  const classes: { readonly [key: string]: string };
+  export default classes;
+}
+```
+- [Stack Question - Reference to Bug and Solution](https://stackoverflow.com/questions/46501297/typescript-cant-find-module-less)
+
+```javascript
+{
+  test: lessRegex,
+  use: getStyleLoaders(
+    {
+      importLoaders: 3,
+      sourceMap: isEnvProduction
+        ? shouldUseSourceMap
+        : isEnvDevelopment,
+      modules: true,
+    },
+    'less-loader'
+  ),
+  // Don't consider CSS imports dead code even if the
+  // containing package claims to have no side effects.
+  // Remove this when webpack adds a warning or an error for this.
+  // See https://github.com/webpack/webpack/issues/6571
+  sideEffects: true,
+},
+{
+  test: lessModuleRegex,
+  use: getStyleLoaders({
+    importLoaders: 3,
+    sourceMap: isEnvProduction
+      ? shouldUseSourceMap
+      : isEnvDevelopment,
+    modules: {
+      mode: 'local',
+      getLocalIdent: getCSSModuleLocalIdent,
+    },
+  }),
+},
+```
+

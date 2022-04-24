@@ -59,7 +59,7 @@ I will probably go with [Font Awesome - weather icons](https://fontawesome.com/s
 3. Write out Default state and basic functionality
 4. Switch from manual fake weather data -> sample api data -> live api data
   - Fix API to exclude current temp and only get the daily values.
-  - Move the API id into an environment variable or secret or something like that.
+  - Move the API id into an environment variable or secret
   - Map the icons to the possible weather values
 
 

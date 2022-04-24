@@ -1,5 +1,10 @@
 # Weather App (React)
 
+## Important Links
+
+- [Live Application - J8ahmed.com](https://weatherapp.j8ahmed.com/)
+- [GitHub Repo](https://github.com/j8ahmed/weather_app_aa)
+
 ## Rough Notes
 
 ### Layout

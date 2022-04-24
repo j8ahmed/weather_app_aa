@@ -29,8 +29,24 @@ Useful links:
 - [API documentation](https://openweathermap.org/api) 
 - [Current Weather API Docs](https://openweathermap.org/current)
 - [Details of your plan](https://openweathermap.org/price) 
+- [One Call API - For free users](https://openweathermap.org/api/one-call-api#history-how) 
+- [Openweather Map](https://openweathermap.org/city/6167865) 
+- [Weather Icons information - May be useful](https://openweathermap.org/weather-conditions)
+- [Open Weather Icons list](https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2) 
 
 Please, note that 16-days daily forecast and History API are not available for Free subscribers
+
+```
+Geographic Coordinates for Cities (Needed for the API calls):
+
+City        Latitude     longitude
+----        --------     ---------
+Toronto     43.7001      -79.4163
+London      51.5085      -0.1257
+Tokyo       35.6895      139.6917
+```
+
+Example Weather API format -> Current weather (Toronto): 
 
 ### Icon and Fonts Resources
 
@@ -41,6 +57,11 @@ I will probably go with [Font Awesome - weather icons](https://fontawesome.com/s
 1. Setup files system to match layout
 2. Build class components to represent static version of app (no-styling)
 3. Write out Default state and basic functionality
+4. Switch from manual fake weather data -> sample api data -> live api data
+  - Fix API to exclude current temp and only get the daily values.
+  - Move the API id into an environment variable or secret or something like that.
+  - Map the icons to the possible weather values
+
 
 
 ### Bugs and Fixes
@@ -91,3 +112,18 @@ declare module '*.module.less' {
 },
 ```
 
+---
+
+## General References Used in Project
+
+- [Fontawesome cdn links](https://cdnjs.com/libraries/font-awesome) 
+- [font awesome weather icons](https://fontawesome.com/icons/cloud?s=solid) 
+- [Open Weather Icons list](https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2) 
+- [json formatter](https://jsonformatter.curiousconcept.com/#) 
+- []() 
+- []() 
+- []() 
+- []() 
+- []() 
+- []() 
+- []() 
